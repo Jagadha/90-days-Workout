@@ -11,11 +11,11 @@ import org.openqa.selenium.interactions.Actions;
 public class Myntra {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
 		
 // 1) Open https://www.myntra.com/
