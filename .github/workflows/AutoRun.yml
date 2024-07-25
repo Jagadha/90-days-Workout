@@ -1,0 +1,10 @@
+name: AutoTrigger
+'on':
+  schedule:
+    - cron: 47 05 * * *
+jobs:
+  check-AutoRun:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@90-days-Workout
+      - uses: ./.BigBasket.java
