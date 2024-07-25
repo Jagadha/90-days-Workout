@@ -2,7 +2,7 @@ name: Java CI
 
 on:
   schedule:
-  - cron: "36 11 * * *"
+  - cron: "59 11 * * *"
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
         distribution: 'adopt'
         
     - name: Compile Java
-      run: javac -d out src/com/Helloworld.java
+      run: javac -d out src/com/HelloWorld.java
       
     - name: Run Main Class
       run: java -cp out src/com/Helloworld
