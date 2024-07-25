@@ -1,10 +1,13 @@
 name: AutoTrigger
 'on':
   schedule:
-    - cron: 50 06 * * *
+    - cron: 08 10 * * *
 jobs:
   check-AutoRun:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@90-days-Workout
-      - uses: ./.BigBasket.java
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run the script
+        run :  BigBasket.java
