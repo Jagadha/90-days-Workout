@@ -1,7 +1,7 @@
 name: AutoTrigger
 'on':
   schedule:
-    - cron: 08 10 * * *
+    - cron: 21 09 * * *
 jobs:
   check-AutoRun:
     runs-on: windows-latest
