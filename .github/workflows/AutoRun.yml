@@ -2,7 +2,7 @@ name: AutoTrigger
 
 on:
   schedule:
-  - cron: "21 09 * * *"
+  - cron: "21 08 * * *"
   
 jobs:
   build:
