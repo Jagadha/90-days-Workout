@@ -1,7 +1,16 @@
-public class HelloWorld {
+package com;
 
-	public static void main(String[] args) {
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Helloworld {
+
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
+		
 		Properties prop = new Properties();
 		prop.load(new FileInputStream("Config.properties"));
 		
