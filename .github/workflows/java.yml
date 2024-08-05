@@ -17,9 +17,19 @@ jobs:
       with:
         java-version: '17'
         distribution: 'adopt'
+
+    - name: Set up Chrome
+      uses: browser-actions/setup-chrome@v1
+
+    - name: Set up ChromeDriver
+      uses: nanasess/setup-chromedriver@v1
+      with:
+        chromedriver-version: 'latest'
         
     - name: Compile Java
       run: javac -d out src/com/HelloWorld.java
       
     - name: Run Main Class
-      run: java -cp out src/com/HelloWorld.java
+      run: java -cp out:libs/* src/com/HelloWorld.java
+      env:
+        CONFIG_FILE: src/com/Config.properties
